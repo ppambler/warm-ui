@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/ppambler/warm-ui/issues"
   },
-  "homepage": "https://github.com/ppambler/warm-ui#readme"
+  "homepage": "https://github.com/ppambler/warm-ui#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
