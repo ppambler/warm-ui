@@ -32,42 +32,11 @@
       font-size: var(--font-size);
     }
   </style>
-  <style>
-    /*button这个元素天生自带绝对居中哈！所以你无须设置什么行高以及水平居中*/
-    .g-button {
-      font-size: var(--font-size);
-      height: var(--button-height);
-      /*左右一个1个字的间距呀*/
-      padding: 0 1em;
-      border-radius: var(--border-radius);
-      border: 1px solid var(--border-color);
-      background: var(--button-bg);
-    }
-    /*一个按钮的几种状态，状态的变化主要体现在颜色的变化哦*/
-    /*hover边框色变化*/
-    .g-button:hover {
-      border-color: var(--border-color-hover);
-    }
-    /*active背景色变化，需要注意的是边框的底部也是有背景色的哦*/
-    .g-button:active {
-      background-color: var(--button-active-bg);
-    }
-    /*tab聚焦元素，没有默认的蓝色光晕呀！*/
-    .g-button:focus {
-      outline: none;
-    }
-  </style>
 </head>
 <body>
 <div id="app">
   <g-button></g-button>
 </div>
-<script src="./node_modules/vue/dist/vue.min.js"></script>
-<script src="./button.js"></script>
-<script>
-  new Vue({
-    el: '#app',
-  })
-</script>
+<script src="./src/app.js"></script>
 </body>
 </html>
