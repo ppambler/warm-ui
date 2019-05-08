@@ -32,12 +32,6 @@
       font-size: var(--font-size);
     }
   </style>
-  <style>
-    .icon {
-      width: 1em;
-      height: 1em;
-    }
-  </style>
 </head>
 <body>
 <div id="app">
@@ -46,8 +40,15 @@
   <g-button icon="settings" icon-position="right">按钮</g-button>
   <g-button icon="down">down</g-button>
   <g-button icon="down">下拉</g-button>
-  <g-button class="xxx" icon="thumbs-up" icon-position="up">button</g-button>  
-  <g-button class="xxx" icon="thumbs-up" icon-position="right">button</g-button>  
+  <!-- <g-button class="xxx" icon="thumbs-up" icon-position="up">button</g-button>   -->
+  <!-- 这里的class="xxx"用于测试g-button组件能否使用class特性 -->
+  <g-button class="xxx" icon="thumbs-up" icon-position="right">button</g-button>
+  <!-- 代码重复姿势 -->
+  <svg class="g-icon">
+    <use xlink:href="#i-download"></use>
+  </svg>
+  <!-- 测试icon组件 -->
+  <g-icon name="download"></g-icon>
 </div>
 <script src="./src/app.js"></script>
 <script src="//at.alicdn.com/t/font_1181189_mufqg8c056p.js"></script>
