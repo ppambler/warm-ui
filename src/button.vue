@@ -10,7 +10,18 @@
 </template>
 <script>
   export default {
-    props: ['icon','iconPosition']
+    // props: ['icon','iconPosition']
+    props: {
+      icon: {},
+      iconPosition: {
+        type: String,
+        default: 'left', //如果在使用g-button组件的时候，没有写icon-position特性的话，那么就会使用这个left作为默认参数
+        validator (value) {
+          // console.log(value) //拿到的是用户所传过来的参数
+          return value === 'left' || value === 'right'
+        }
+      }
+    }
   }
 </script>
 <style lang="scss">
