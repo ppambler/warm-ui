@@ -3,6 +3,7 @@
     <!-- 安装书写规范要求，这得要自闭合，但是自闭合之后后边的content无法渲染，或许这是工具出问题的缘故-->
     <!-- <g-icon class="icon" v-if="icon" :name="icon"/> -->
     <g-icon class="icon" v-if="icon" :name="icon"></g-icon>
+    <g-icon class="loading" name="loading"></g-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -25,6 +26,14 @@
   }
 </script>
 <style lang="scss">
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
   .g-button {
     font-size: var(--font-size);
     height: var(--button-height);
@@ -64,5 +73,9 @@
         margin-left: .1em;
       }
     }
+    > .loading {
+      animation: spin 2s infinite linear;
+    }
   }
+
 </style>
