@@ -1,9 +1,9 @@
 <template>
-  <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
+  <button class="g-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
     <!-- 安装书写规范要求，这得要自闭合，但是自闭合之后后边的content无法渲染，或许这是工具出问题的缘故-->
     <!-- <g-icon class="icon" v-if="icon" :name="icon"/> -->
-    <g-icon class="icon" v-if="icon" :name="icon"></g-icon>
-    <g-icon class="loading" name="loading"></g-icon>
+    <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
+    <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -14,6 +14,10 @@
     // props: ['icon','iconPosition']
     props: {
       icon: {},
+      loading:  {
+        type: Boolean,
+        default: false
+      },
       iconPosition: {
         type: String,
         default: 'left', //如果在使用g-button组件的时候，没有写icon-position特性的话，那么就会使用这个left作为默认参数
