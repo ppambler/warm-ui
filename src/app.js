@@ -18,6 +18,9 @@ new Vue({
 
 // 单元测试
 import chai from 'chai'
+import spies from 'chai-spies'
+chai.use(spies)
+
 const expect = chai.expect
 
 {
@@ -90,10 +93,13 @@ const expect = chai.expect
     }
   })
   vm.$mount()
-  vm.$on('click',function() {
-    expect(1).to.eq(1)
-  })
-  // 希望上边那个回调函数被执行
+  // 传给spy()的回调函数还是会被调用执行的！
+  // spy就是个mock，通过spy是否被调用，来断定spy()里边那个回调函数是否被调用了！
+  let spy = chai.spy(function(){})
+  vm.$on('click', spy)
   let button = vm.$el
   button.click()
+  expect(spy).to.have.been.called()
+  vm.$el.remove()
+  vm.$destroy()
 }
