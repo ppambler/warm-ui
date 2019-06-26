@@ -40,7 +40,7 @@ npm i --save warm-ui-test-1
      --border-color-hover: #666;
    }
    body {
-   	font-size: var(--font-size);
+     font-size: var(--font-size);
    }
    ```
 
@@ -61,13 +61,8 @@ npm i --save warm-ui-test-1
    }
    ```
 
-3.  引入 svg symbols
-
-   ```html
-   <script src="//at.alicdn.com/t/font_1181189_o490ycjikz.js"></script>
-   ```
-
    
+
 
 ## 文档
 
