@@ -41,7 +41,11 @@
 <body>
 <div id="app">
   <div class="box">
-    <g-input value="王" @change="inputChange"></g-input>
+    <!-- 可以像对input标签使用v-model那样使用g-input -->
+    <g-input v-model="message"></g-input>
+    <p>{{message}}</p>
+    <!-- 测试UI下的变化导致UI上的变化 -->
+    <button @click="message+=1">+1</button>
   </div>
   <!-- 为了测试方便，把g-input放在最前边，当然，你也可以移除下面的 -->
   <div class="box">
