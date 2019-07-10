@@ -15,7 +15,6 @@
 
 <script>
 import Icon from './icon'
-console.log(Icon)
 export default {
   name: 'WarmInput',
   components: {Icon},
