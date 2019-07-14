@@ -35,7 +35,6 @@ export default {
     this.$children.forEach((vm) => {
       vm.gutter = this.gutter
     })
-    console.log(this.$el)
   }
 };
 
