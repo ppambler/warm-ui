@@ -111,6 +111,7 @@ export default {
     .close {
       padding-left: 16px;
       flex-shrink: 0;
+      cursor: pointer;
     }
     .line {
       height: 100%;
