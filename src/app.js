@@ -36,10 +36,18 @@ new Vue({
     message: 'hi'
   },
   created() {
+    this.$toast('<strong>我是你大爷</strong>',{
+      enableHtml: true,
+      closeButton: {
+        text: '关闭呀！',
+        callback(vm) {
+          console.log(vm.log())
+        }
+      }
+    })
   },
   methods: {
     showToast() {
-      this.$toast('我是 message')
     }
   }
 })
