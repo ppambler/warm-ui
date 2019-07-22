@@ -36,14 +36,16 @@ new Vue({
     message: 'hi'
   },
   created() {
-    this.$toast('<strong>我是你大爷</strong>',{
-      enableHtml: true,
+    this.$toast('你的智商需要充值！',{
+      position: 'middle',
       closeButton: {
-        text: '关闭呀！',
-        callback(vm) {
-          console.log(vm.log())
+        text: '已充值',
+        callback() {
+          console.log('他说已经充值智商了！')
         }
-      }
+      },
+      autoClose: false,
+      autoCloseDelay: 3
     })
   },
   methods: {
