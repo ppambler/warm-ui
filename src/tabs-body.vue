@@ -6,7 +6,11 @@
 
 <script>
 export default {
-  name: "WarmTabsBody"
+  name: "WarmTabsBody",
+  inject: ['eventBus'],
+  created() {
+    
+  }
 };
 </script>
 
