@@ -32,7 +32,17 @@ export default {
     }
   },
   mounted() {
-    this.eventBus.$emit('update:selected', this.selected)
+    console.log(this.$children)
+    this.$children.forEach((vm)=>{
+      if(vm.$options.name === 'WarmTabsHead') {
+        vm.$children.forEach((childVm)=>{
+          if(childVm.$options.name === 'WarmTabsItem'
+            && childVm.name === this.selected) {
+              this.eventBus.$emit('update:selected', this.selected, childVm)
+          }
+        })
+      }
+    })
   }
 };
 </script>
