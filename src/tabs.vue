@@ -32,7 +32,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$children)
     this.$children.forEach((vm)=>{
       if(vm.$options.name === 'WarmTabsHead') {
         vm.$children.forEach((childVm)=>{
