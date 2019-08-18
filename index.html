@@ -39,15 +39,23 @@
 <body>
 <div id="app">
   <div style="overflow: hidden; padding: 150px;">
-    <g-popover>
+    <g-popover position="bottom">
       <template slot="content">
         <div>dadadadaadadadasdasdasdasfjaksfasjfklajfldaksldkald</div>
       </template>
-      <g-button>点我</g-button>
+      <g-button>下</g-button>
     </g-popover>
-    <g-popover>
+    <g-popover position="left">
       <div slot="content">我是popover内容</div>
-      <g-button>点我</g-button>
+      <g-button>左</g-button>
+    </g-popover>
+    <g-popover position="top">
+      <div slot="content">我是popover内容</div>
+      <g-button>上</g-button>
+    </g-popover>
+    <g-popover position="right">
+      <div slot="content">我是popover内容</div>
+      <g-button>右</g-button>
     </g-popover>
   </div>
 </div>
