@@ -37,8 +37,8 @@
 
 </head>
 <body>
-<div id="app">
-  <div style="overflow: hidden; padding: 150px;">
+<div id="app" style="padding-left: 100px">
+  <div style="overflow: hidden; padding-top: 50px; padding-bottom: 40px;">
     <g-popover position="bottom">
       <template slot="content">
         <div>dadadadaadadadasdasdasdasfjaksfasjfklajfldaksldkald</div>
@@ -55,6 +55,28 @@
       <g-button>上</g-button>
     </g-popover>
     <g-popover position="right">
+      <div slot="content">我是popover内容</div>
+      <g-button>右</g-button>
+    </g-popover>
+  </div>
+  <div style="overflow: hidden; padding-bottom: 150px;">
+    <g-popover position="bottom" trigger="hover">
+      <template slot="content">
+        <div>dadadadaadadadasdasdasdasfjaksfasjfklajfldaksldkald</div>
+        <div>dadadadaadadadasdasdasdasfjaksfasjfklajfldaksldkald</div>
+      </template>
+      <g-button>下</g-button>
+    </g-popover>
+    <g-popover position="left" trigger="hover">
+      <div slot="content">我是popover内容</div>
+      <g-button>左</g-button>
+    </g-popover>
+    <g-popover position="top" trigger="hover">
+      <div slot="content">我是popover内容</div>
+      <div slot="content">我是popover内容dadadad</div>
+      <g-button>上</g-button>
+    </g-popover>
+    <g-popover position="right" trigger="hover">
       <div slot="content">我是popover内容</div>
       <g-button>右</g-button>
     </g-popover>
