@@ -19,7 +19,8 @@ export default {
   name: "WarmPopover",
   data() {
     return {
-      visible: false
+      visible: false,
+      id: 0
     };
   },
   props: {
@@ -83,6 +84,22 @@ export default {
         document.addEventListener("click", this.onClickDocument);
       });
     },
+    onMouseEnter() {
+      this.visible = true
+      this.$nextTick(() => {
+        this.positionContent();
+        this.$refs.contentWrapper.addEventListener('mouseenter',this.onMouseEnter)
+        this.$refs.contentWrapper.addEventListener('mouseleave',this.onMouseLeave)
+      })
+      clearTimeout(this.id)
+    },
+    onMouseLeave() {
+      this.id = setTimeout(()=>{
+        this.visible = false
+        this.$refs.contentWrapper.removeEventListener('mouseenter',this.onMouseEnter)
+        this.$refs.contentWrapper.removeEventListener('mouseleave',this.onMouseLeave)
+      },100)
+    },
     close() {
       this.visible = false;
       document.removeEventListener("click", this.onClickDocument);
@@ -101,16 +118,16 @@ export default {
     if(this.trigger === 'click') {
       this.$refs.popover.addEventListener('click', this.onClick)
     } else {
-      this.$refs.popover.addEventListener('mouseenter',this.open)
-      this.$refs.popover.addEventListener('mouseleave',this.close)
+      this.$refs.popover.addEventListener('mouseenter',this.onMouseEnter)
+      this.$refs.popover.addEventListener('mouseleave',this.onMouseLeave)
     }
   },
   destroyed() {
     if(this.trigger === 'click') {
       this.$refs.popover.removeEventListener('click', this.onClick)
     } else {
-      this.$refs.popover.removeEventListener('mouseenter',this.open)
-      this.$refs.popover.removeEventListener('mouseleave',this.close)
+      this.$refs.popover.removeEventListener('mouseenter',this.onMouseEnter)
+      this.$refs.popover.removeEventListener('mouseleave',this.onMouseLeave)
     }
   },
   computed: {
