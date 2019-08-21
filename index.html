@@ -40,8 +40,10 @@
 <div id="app" style="padding-left: 100px">
   <div style="overflow: hidden; padding-top: 50px; padding-bottom: 40px;">
     <g-popover position="bottom">
-      <template slot="content">
-        <div>dadadadaadadadasdasdasdasfjaksfasjfklajfldaksldkald</div>
+      <template slot="content" slot-scope="{close}">
+        <div>文字</div>
+        <div><a href="http://qq.com">看新网</a></div>
+        <g-button @click="close">关闭</g-button>
       </template>
       <g-button>下</g-button>
     </g-popover>
@@ -55,20 +57,20 @@
       <g-button>上</g-button>
     </g-popover>
     <g-popover position="right">
-      <div slot="content">我是popover内容</div>
+      <div slot="content"><a href="http://qq.com">看新网</a></div>
       <g-button>右</g-button>
     </g-popover>
   </div>
   <div style="overflow: hidden; padding-bottom: 150px;">
     <g-popover position="bottom" trigger="hover">
-      <template slot="content">
+      <template slot="content" slot-scope="{close}">
         <div>dadadadaadadadasdasdasdasfjaksfasjfklajfldaksldkald</div>
-        <div>dadadadaadadadasdasdasdasfjaksfasjfklajfldaksldkald</div>
+        <g-button @click="close">关闭</g-button>
       </template>
       <g-button>下</g-button>
     </g-popover>
     <g-popover position="left" trigger="hover">
-      <div slot="content">我是popover内容</div>
+      <div slot="content"><a href="http://qq.com">看新网</a></div>
       <g-button>左</g-button>
     </g-popover>
     <g-popover position="top" trigger="hover">
