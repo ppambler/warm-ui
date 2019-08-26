@@ -76,6 +76,7 @@ new Vue({
         autoClose: 3,
       })
     }
-  }
+  },
+
 })
 
