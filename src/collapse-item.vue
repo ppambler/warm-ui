@@ -1,7 +1,7 @@
 <template>
   <div class="collapseItem">
-    <div class="title" @click="toggle">{{title}}</div>
-    <div class="content" v-if="open">
+    <div class="title" @click="toggle" :data-name="name">{{title}}</div>
+    <div class="content" ref="content" v-if="open">
       <slot></slot>
     </div>
   </div>
@@ -52,7 +52,6 @@ export default {
 <style lang="scss" scoped>
 $grey: #ddd;
 $border-radius: 4px;
-$title-bgc: #fafafa;
 $content-bgc: #fff;
 .collapseItem {
    > .title {
@@ -61,7 +60,7 @@ $content-bgc: #fff;
     min-height: 32px;
     padding: 0 8px;
     margin-top: -1px;
-    background-color: $title-bgc;
+    background-color: lighten($grey, 8%);
     border-top: 1px solid $grey;
     border-bottom: 1px solid $grey;
   }
