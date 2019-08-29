@@ -3,6 +3,7 @@ module.exports = {
   base: '/warm-ui/',
   title: 'Warm UI',
   description: '一个好用的 UI 框架',
+  dest: './docs-dist',
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
