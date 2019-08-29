@@ -10,81 +10,81 @@
   </button>
 </template>
 <script>
-  import Icon from './icon'
-  export default {
-    name: "WarmButton",
-    components: {
-      'g-icon': Icon
+import Icon from "./icon";
+export default {
+  name: "WarmButton",
+  components: {
+    "g-icon": Icon
+  },
+  // props: ['icon','iconPosition']
+  props: {
+    icon: {},
+    loading: {
+      type: Boolean,
+      default: false
     },
-    // props: ['icon','iconPosition']
-    props: {
-      icon: {},
-      loading:  {
-        type: Boolean,
-        default: false
-      },
-      iconPosition: {
-        type: String,
-        default: 'left', //如果在使用g-button组件的时候，没有写icon-position特性的话，那么就会使用这个left作为默认参数
-        validator (value) {
-          // console.log(value) //拿到的是用户所传过来的参数
-          return value === 'left' || value === 'right'
-        }
+    iconPosition: {
+      type: String,
+      default: "left", //如果在使用g-button组件的时候，没有写icon-position特性的话，那么就会使用这个left作为默认参数
+      validator(value) {
+        // console.log(value) //拿到的是用户所传过来的参数
+        return value === "left" || value === "right";
       }
     }
   }
+};
 </script>
 <style lang="scss" scoped>
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+@import "var";
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  .g-button {
-    font-size: var(--font-size);
-    height: var(--button-height);
-    padding: 0 1em;
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
-    background: var(--button-bg);
-    display:inline-flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    &:hover {
-      border-color: var(--border-color-hover);
-    }
-    &:active {
-      background-color: var(--button-active-bg);
-    }
-    &:focus {
-      outline: none;
-    }
-    > .content {
-      order: 2;
-      vertical-align: top;
-    }
-    > .icon {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.g-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: $button-height;
+  padding: 0 1em;
+  font-size: $font-size;
+  vertical-align: middle;
+  background: $button-bg;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  &:hover {
+    border-color: $border-color-hover;
+  }
+  &:active {
+    background-color: $button-active-bg;
+  }
+  &:focus {
+    outline: none;
+  }
+   > .content {
+    order: 2;
+    vertical-align: top;
+  }
+   > .icon {
+    order: 1;
+    margin-right: .1em;
+  }
+  // 如果这个按钮元素有icon-right的class，那么就调换一下位置吧！
+  &.icon-right {
+     > .content {
       order: 1;
-      margin-right: .1em;
     }
-    // 如果这个按钮元素有icon-right的class，那么就调换一下位置吧！
-    &.icon-right {
-      > .content {
-        order: 1;
-      }
-      > .icon {
-        order: 2;
-        margin-right: 0;
-        margin-left: .1em;
-      }
-    }
-    > .loading {
-      animation: spin 2s infinite linear;
+     > .icon {
+      order: 2;
+      margin-right: 0;
+      margin-left: .1em;
     }
   }
-
+   > .loading {
+    animation: spin 2s infinite linear;
+  }
+}
 </style>
