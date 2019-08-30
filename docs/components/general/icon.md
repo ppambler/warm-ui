@@ -16,11 +16,11 @@ title: Icon 图标
 ### 代码
 
 ```html
-<g-icon name="smile"></g-icon>
-<g-icon name="check-circle"></g-icon>
-<g-icon name="sync"></g-icon>
-<g-icon name="comment"></g-icon>
-<g-icon name="bug"></g-icon>
-<g-icon name="edit-square"></g-icon>
+<w-icon name="smile"></w-icon>
+<w-icon name="check-circle"></w-icon>
+<w-icon name="sync"></w-icon>
+<w-icon name="comment"></w-icon>
+<w-icon name="bug"></w-icon>
+<w-icon name="edit-square"></w-icon>
 ```
 

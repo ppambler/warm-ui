@@ -36,19 +36,38 @@
       font-size: var(--font-size);
     }
   </style>
+  <style>
+    .demoRow {
+      margin-top: 10px;
+      margin-bottom: -10px;
+    }
 
+    .demoCol {
+      min-height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #d3dce6;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 
 <body>
   <div id="app">
-    <g-icon name="smile"></g-icon>
-    <g-icon name="check-circle"></g-icon>
-    <g-icon name="sync"></g-icon>
-    <g-icon name="comment"></g-icon>
-    <g-icon name="bug"></g-icon>
-    <g-icon name="edit-square"></g-icon>
-    <g-icon name="food-cookie"></g-icon>
-    <g-icon name="food-bread"></g-icon>
+    <g-row class="demoRow">
+      <g-col span="23" offset="1" :narrow-pc="{span:12, offset:12}">
+        <div class="demoCol"></div>
+      </g-col>
+    </g-row>
+    <g-row class="demoRow" gutter="10">
+      <g-col span="24" :ipad="{span:12}">
+        <div class="demoCol"></div>
+      </g-col>
+      <g-col span="24" :ipad="{span:12}">
+        <div class="demoCol"></div>
+      </g-col>
+    </g-row>
   </div>
   <script src="./src/app.js"></script>
 </body>
