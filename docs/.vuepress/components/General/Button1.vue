@@ -23,7 +23,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 .button1 {
   margin-top: 1.5em;
 }

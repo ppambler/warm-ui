@@ -103,7 +103,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .grid1 {
   margin-top: 1.5em;
 }

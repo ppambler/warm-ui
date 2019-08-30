@@ -19,7 +19,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .wrapper {
   margin-top: 1.5em;
 }

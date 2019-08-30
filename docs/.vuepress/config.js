@@ -20,11 +20,11 @@ module.exports = {
       },
       {
         title: '组件',
-        collapsable: true,
+        collapsable: false,
         children: [
           {
             title: '通用',
-            collapsable: true,
+            collapsable: false,
             children: [
               '/components/general/button',
               '/components/general/icon',
@@ -32,7 +32,7 @@ module.exports = {
           },
           {
             title: '布局',
-            collapsable: true,
+            collapsable: false,
             children: [
               '/components/layout/grid',
               '/components/layout/layout',
@@ -40,14 +40,14 @@ module.exports = {
           },
           {
             title: '数据录入',
-            collapsable: true,
+            collapsable: false,
             children: [
               '/components/data-entry/input',
             ]
           },
           {
             title: '数据展示',
-            collapsable: true,
+            collapsable: false,
             children: [
               '/components/data-display/collapse',
               '/components/data-display/popover',
@@ -56,7 +56,7 @@ module.exports = {
           },
           {
             title: '反馈',
-            collapsable: true,
+            collapsable: false,
             children: [
               '/components/feedback/toast',
             ]
