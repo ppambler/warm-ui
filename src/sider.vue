@@ -1,45 +1,70 @@
 <template>
-    <transition name="slide">
-      <div class="sider" v-if="visible" key="close">
+  <div class="wrapper">
+    <transition name="slide-fade">
+      <div class="sider" v-if="visible" key="sider">
         <slot></slot>
-        <button @click="visible=false">close</button>
-      </div>
-      <div class="sider-show" v-else key="show">
-        <button @click="visible=true">show</button>
       </div>
     </transition>
+    <g-button class="sider-btn" v-if="closeButton" :icon="icon" @click="showSider"></g-button>
+  </div>
 </template>
 
 <script>
+import Button from "./button";
 export default {
   name: "WarmSider",
+  components: {
+    "g-button": Button
+  },
+  props: {
+    closeButton: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
-      visible: true
+      visible: true,
+      icon: "left"
     };
+  },
+  methods: {
+    showSider() {
+      if (this.visible) {
+        this.visible = false;
+        this.icon = "right";
+      } else {
+        this.visible = true;
+        this.icon = "left";
+      }
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.sider {
+.wrapper {
   position: relative;
-  > button {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
 }
-.sider-show {
-  position: fixed;
-  top: calc(50vh - 0.5em);
-  left: 0;
+
+.sider-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateX(100%) translateY(-50%);
 }
-.slide-enter-active, .slide-leave-active {
-  transition: all .5s;
+
+.slide-fade-enter-active {
+  transition: all 1s ease;
 }
-// .slide-enter, .slide-leave-to {
-//   margin-left: -150px; //这个得根据用户设置sider的宽度来确定
-// }
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1, .5, .8, 1);
+}
+.slide-fade-enter,
+.slide-fade-leave-to
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
 </style>
 

@@ -232,15 +232,16 @@ title: Grid 栅格
 ```html
 <w-row class="demoRow">
   <w-col span="23" offset="1" :narrow-pc="{span:12, offset:12}">
-    <div class="demoCol"></div>
+    <div class="demoCol">1</div>
   </w-col>
 </w-row>
+
 <w-row class="demoRow" gutter="10">
-  <w-col span="24" :narrow-pc="{span:12}">
-    <div class="demoCol"></div>
+  <w-col span="24" :ipad="{span:12}">
+    <div class="demoCol">12</div>
   </w-col>
-  <w-col span="24" :narrow-pc="{span:12}">
-    <div class="demoCol"></div>
+  <w-col span="24" :ipad="{span:12}">
+    <div class="demoCol">12</div>
   </w-col>
 </w-row>
 ```

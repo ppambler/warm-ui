@@ -37,38 +37,59 @@
     }
   </style>
   <style>
-    .demoRow {
-      margin-top: 10px;
-      margin-bottom: -10px;
-    }
-
-    .demoCol {
-      min-height: 100px;
+    .demoHeader {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      height: 50px;
+      background-color: #f5f5f5;
+    }
+
+    .demoSider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 100px;
+      height: 250px;
+      background-color: #eee;
+    }
+
+    .demoContent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 150px;
       background-color: #d3dce6;
-      margin-top: 10px;
+    }
+
+    .demoFooter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 50px;
+      background-color: #f5f5f5;
     }
   </style>
 </head>
 
 <body>
   <div id="app">
-    <g-row class="demoRow">
-      <g-col span="23" offset="1" :narrow-pc="{span:12, offset:12}">
-        <div class="demoCol"></div>
-      </g-col>
-    </g-row>
-    <g-row class="demoRow" gutter="10">
-      <g-col span="24" :ipad="{span:12}">
-        <div class="demoCol"></div>
-      </g-col>
-      <g-col span="24" :ipad="{span:12}">
-        <div class="demoCol"></div>
-      </g-col>
-    </g-row>
+    <g-layout class="demoLayout">
+      <g-sider close-button>
+        <div class="demoSider">sider</div>
+      </g-sider>
+      <g-layout class="demoLayout">
+        <g-header class="demoHeader">header</g-header>
+        <g-content class="demoContent">content</g-content>
+        <g-footer class="demoFooter">footer</g-footer>
+      </g-layout>
+    </g-layout>
   </div>
+
   <script src="./src/app.js"></script>
 </body>
 
