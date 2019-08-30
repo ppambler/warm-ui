@@ -26,11 +26,13 @@ export default {
 </script>
 
 <style scoped>
+* {
+  box-sizing: border-box;
+}
 .grid4 {
   margin-top: 1.5em;
 }
 .demoRow {
-  flex-wrap: nowrap;
   margin-top: 10px;
   margin-bottom: -10px;
 }
@@ -40,9 +42,5 @@ export default {
   margin-top: 10px;
   background-color: #d3dce6;
 }
-@media (max-width: 576px) {
-  .demoRow {
-    flex-wrap: wrap;
-  }
-}
+
 </style>

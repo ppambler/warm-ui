@@ -39,17 +39,18 @@ export default {
 </script>
 
 <style scoped>
+* {
+  box-sizing: border-box;
+}
 .grid2 {
   margin-top: 1.5em;
 }
 .demoRow {
-  flex-wrap: nowrap;
   margin-top: 10px;
 }
 
 .demoCol {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   min-height: 100px;
