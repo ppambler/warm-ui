@@ -36,6 +36,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "var";
+$disabled-bgc: #f5f5f5;
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -55,6 +56,7 @@ export default {
   background: $button-bg;
   border: 1px solid $border-color;
   border-radius: $border-radius;
+  cursor: pointer;
   &:hover {
     border-color: $border-color-hover;
   }
@@ -84,7 +86,14 @@ export default {
     }
   }
    > .loading {
-    animation: spin 2s infinite linear;
+    animation: spin 1s infinite linear;
+  }
+  &[disabled] {
+    background-color: $disabled-bgc;
+    cursor: not-allowed;
+  }
+  &[disabled]:hover {
+    border-color: $border-color;
   }
 }
 </style>

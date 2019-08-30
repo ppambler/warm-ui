@@ -41,16 +41,17 @@
 
 <body>
   <div id="app">
-    <g-button>默认按钮</g-button>
-    <g-button icon="settings">默认按钮</g-button>
-    <g-button :loading="true">默认按钮</g-button>
-    <g-button disabled>默认按钮</g-button>
-    <g-collapse :selected.sync="selectedTab" single>
-      <g-collapse-item title="标题1" name="1">内容1</g-collapse-item>
-      <g-collapse-item title="标题2" name="2">内容2</g-collapse-item>
-      <g-collapse-item title="标题3" name="3">内容3</g-collapse-item>
-    </g-collapse>
-    {{selectedTab}}
+    <g-button>Default</g-button>
+    <g-button icon="left">Icon</g-button>
+    <g-button icon="right" icon-position="right">Icon</g-button>
+    <g-button loading>Loading</g-button>
+    <g-button :loading="isLoading" @click="isLoading = !isLoading">Click me!</g-button>
+    <g-button disabled>Disabled</g-button>
+    <g-button-group>
+      <g-button icon="left">上一页</g-button>
+      <g-button>更多</g-button>
+      <g-button icon="right" icon-position="right">下一页</g-button>
+    </g-button-group>
   </div>
   <script src="./src/app.js"></script>
 </body>

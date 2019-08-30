@@ -1,9 +1,11 @@
 <template>
   <div class="button1">
-    <w-button>默认按钮</w-button>
-    <w-button icon="settings">默认按钮</w-button>
-    <w-button :loading="true">默认按钮</w-button>
-    <w-button disabled>禁用按钮</w-button>
+    <w-button>Default</w-button>
+    <w-button disabled>Disabled</w-button>
+    <w-button icon="left">Icon</w-button>
+    <w-button icon="right" icon-position="right">Icon</w-button>
+    <w-button loading>Loading</w-button>
+    <w-button :loading="isLoading" @click="isLoading = !isLoading">Click me!</w-button>
   </div>
 </template>
 
@@ -13,11 +15,16 @@ export default {
   name: "button1",
   components: {
     "w-button": Button
+  },
+  data: function() {
+    return {
+      isLoading: true
+    };
   }
 };
 </script>
 <style>
-  .button1 {
-    margin-top: 1.5em;
-  }
+.button1 {
+  margin-top: 1.5em;
+}
 </style>
