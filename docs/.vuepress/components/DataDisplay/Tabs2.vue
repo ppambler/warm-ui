@@ -1,9 +1,9 @@
 <template>
-  <div class="tabs1">
+  <div class="tabs2">
     <w-tabs :selected="selected">
       <w-tabs-head>
         <w-tabs-item name="1">Tab 1</w-tabs-item>
-        <w-tabs-item name="2">Tab 2</w-tabs-item>
+        <w-tabs-item name="2" disabled>Tab 2</w-tabs-item>
         <w-tabs-item name="3">Tab 3</w-tabs-item>
       </w-tabs-head>
       <w-tabs-body>
@@ -22,7 +22,7 @@ import WTabsBody from "../../../../src/tabs-body";
 import WTabsItem from "../../../../src/tabs-item";
 import WTabsPane from "../../../../src/tabs-pane";
 export default {
-  name: "tabs1",
+  name: "tabs2",
   components: {
     WTabs,
     WTabsHead,
@@ -32,23 +32,17 @@ export default {
   },
   data() {
     return {
-      selected: "2"
+      selected: "1"
     };
   }
 };
 </script>
 
-<style>
-.tabs-item.active {
-  font-weight: normal !important;
-}
-</style>
-
 <style scoped>
 * {
   box-sizing: border-box;
 }
-.tabs1 {
+.tabs2 {
   margin-top: 1.5em;
 }
 </style>

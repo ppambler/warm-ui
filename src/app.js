@@ -50,7 +50,7 @@ new Vue({
     // selectedTab: ['2', '1'],
     isLoading: true,
     value: '1',
-    selected: '1'
+    selected: '2'
     // selectedTab: 'sports'
   },
   created() {

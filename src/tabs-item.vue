@@ -62,7 +62,7 @@ $disabled-text-color: grey;
   cursor: pointer;
   &.active {
     color: $blue;
-    font-weight: bold;
+    font-weight: 500;
   }
   &:hover {
     color: #40b1ff;
