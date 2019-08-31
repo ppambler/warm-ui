@@ -48,7 +48,8 @@ new Vue({
   el: '#app',
   data: {
     selectedTab: ['2', '1'],
-    isLoading: true
+    isLoading: true,
+    value: '1'
   },
   created() {
   },
