@@ -7,11 +7,11 @@
 <script>
 export default {
   name: "WarmTabsItem",
-  inject: ['eventBus'],
+  inject: ["eventBus"],
   data() {
     return {
       active: false
-    }
+    };
   },
   props: {
     disabled: {
@@ -28,23 +28,25 @@ export default {
       return {
         active: this.active,
         disabled: this.disabled
-      }
+      };
     }
   },
   created() {
     if (this.eventBus) {
-      this.eventBus.$on('update:selected', (name) => {
-        this.active = name === this.name
-      })
-    }
-},
-  methods: {
-    onClick() {
-      if(this.disabled) { return }
-      this.eventBus && this.eventBus.$emit('update:selected', this.name, this)
-      this.$emit('click', this)
+      this.eventBus.$on("update:selected", name => {
+        this.active = name === this.name;
+      });
     }
   },
+  methods: {
+    onClick() {
+      if (this.disabled) {
+        return;
+      }
+      this.eventBus && this.eventBus.$emit("update:selected", this.name, this);
+      this.$emit("click", this);
+    }
+  }
 };
 </script>
 
@@ -52,12 +54,12 @@ export default {
 $blue: #1890ff;
 $disabled-text-color: grey;
 .tabs-item {
-  flex-shrink: 0;
-  padding: 0 1em;
-  cursor: pointer;
-  height: 100%;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
+  height: 100%;
+  padding: 0 1em;
+  cursor: pointer;
   &.active {
     color: $blue;
     font-weight: bold;
