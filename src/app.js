@@ -77,6 +77,17 @@ new Vue({
         },
         autoClose: 3,
       })
+    },
+    onClickButton() {
+      this.$toast('<strong style="color:#ec7171;">请你吃顿好的</strong>！', {
+        enableHtml: true,
+        closeButton: {
+          text: '真诚吗？',
+          callback: () => {
+            console.log("他说真诚吗？")
+          }
+        }
+      })
     }
   },
 
