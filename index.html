@@ -39,24 +39,23 @@
     }
   </style>
   <style>
-
+    .demoCollapse {
+      width: 80%;
+    }
   </style>
 </head>
 
 <body>
   <div id="app">
-    <g-tabs :selected="selected">
-      <g-tabs-head>
-        <g-tabs-item name="1">1</g-tabs-item>
-        <g-tabs-item name="2" disabled>2</g-tabs-item>
-        <g-tabs-item name="3">3</g-tabs-item>
-      </g-tabs-head>
-      <g-tabs-body>
-        <g-tabs-pane name="1">content 1</g-tabs-pane>
-        <g-tabs-pane name="2">content 2</g-tabs-pane>
-        <g-tabs-pane name="3">content 3</g-tabs-pane>
-      </g-tabs-body>
-    </g-tabs>
+    <g-collapse class="demoCollapse" :selected.sync="selectedTab">
+      <g-collapse-item title="title 1" name="1">A dog is a type of domesticated animal. </g-collapse-item>
+      <g-collapse-item title="title 2" name="2">A dog is a type of domesticated animal. Known for its loyalty and
+        faithfulness, it can be found as a welcome guest in
+        many households across the world.</g-collapse-item>
+      <g-collapse-item title="title 3" name="3">A dog is a type of domesticated animal. Known for its loyalty and
+        faithfulness, it can be found as a welcome guest in
+        many households across the world.</g-collapse-item>
+    </g-collapse>
   </div>
 
   <script src="./src/app.js"></script>

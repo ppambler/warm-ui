@@ -57,12 +57,13 @@ $content-bgc: #fff;
    > .title {
     display: flex;
     align-items: center;
-    min-height: 32px;
-    padding: 0 8px;
+    min-height: 46px;
+    padding: 0 16px;
     margin-top: -1px;
     background-color: lighten($grey, 8%);
     border-top: 1px solid $grey;
     border-bottom: 1px solid $grey;
+    cursor: pointer;
   }
   &:first-child {
      > .title {
@@ -82,7 +83,8 @@ $content-bgc: #fff;
     }
   }
    > .content {
-    padding: 8px;
+    min-height: 42px;
+    padding: 16px;
     background-color: $content-bgc;
   }
 }
