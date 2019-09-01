@@ -4,8 +4,8 @@ module.exports = {
   title: '☀ Warm UI',
   description: '一个好用的 UI 框架',
   dest: './docs-dist',
-  lastUpdated: 'Last Updated',
   themeConfig: {
+    lastUpdated: 'Last Updated',
     nav: [
       { text: '主页', link: '/' },
       { text: 'GitHub', link: 'https://github.com/ppambler/warm-ui' },
