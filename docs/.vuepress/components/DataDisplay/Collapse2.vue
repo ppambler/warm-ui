@@ -5,6 +5,7 @@
       <w-collapse-item title="title 2" name="2">{{text}}</w-collapse-item>
       <w-collapse-item title="title 3" name="3">{{text}}</w-collapse-item>
     </w-collapse>
+    <h3>代码</h3>
   </div>
 </template>
 

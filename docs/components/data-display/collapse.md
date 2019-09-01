@@ -16,8 +16,6 @@ title: Collapse 折叠面板
   <DataDisplay-Collapse1 />
 </ClientOnly>
 
-### 代码
-
 ``` html
 <w-collapse :selected.sync="selectedTab">
   <w-collapse-item title="title 1" name="1">{{text}}</w-collapse-item>
@@ -35,8 +33,6 @@ title: Collapse 折叠面板
 <ClientOnly>
   <DataDisplay-Collapse2 />
 </ClientOnly>
-
-### 代码
 
 ``` html
 <w-collapse :selected.sync="selectedTab" single>
