@@ -1,4 +1,3 @@
-import Vue from 'vue'
 import Button from './src/button'
 import Icon from './src/icon'
 import ButtonGroup from './src/button-group'
@@ -22,5 +21,5 @@ import Collapse from './src/collapse'
 import CollapseItem from './src/collapse-item'
 
 export {
-  Vue, Button, Icon, ButtonGroup, Input, Row, Col, Layout, Header, Sider, Content, Footer, Toast, plugin, Tabs, TabsHead, TabsBody, TabsItem, TabsPane, Popover, Collapse, CollapseItem
+  Button, Icon, ButtonGroup, Input, Row, Col, Layout, Header, Sider, Content, Footer, Toast, plugin, Tabs, TabsHead, TabsBody, TabsItem, TabsPane, Popover, Collapse, CollapseItem
 }
