@@ -1,6 +1,6 @@
 {
   "name": "warm-ui-wheel",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "这是一个基于Vue的UI组件库",
   "main": "dist/index.js",
   "scripts": {
