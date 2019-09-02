@@ -1,7 +1,7 @@
 const path = require('path')
 module.exports = {
   base: '/warm-ui/',
-  title: '☀ Warm UI',
+  title: '☀️ Warm UI',
   description: '一个好用的 UI 框架',
   dest: './docs-dist',
   themeConfig: {
@@ -70,4 +70,24 @@ module.exports = {
   // scss: {
   //   includePaths: [path.join(__dirname, '../../styles')]
   // }
+  markdown: {
+    lineNumbers: true,
+    // markdown-it-anchor 的选项
+    anchor: { permalink: false },
+    // markdown-it-toc 的选项
+    toc: { includeLevel: [1, 2] },
+    // markdown-it-checkbox 的选项
+    checkbox: {
+      disabled: true,
+      divWrap: false,
+      divClass: 'checkbox',
+      idPrefix: 'cbx_',
+      ulClass: 'task-list',
+      liClass: 'task-list-item'
+    },
+    extendMarkdown: md => {
+      // 使用更多的 markdown-it 插件!
+      md.use(require('markdown-it-task-checkbox'))
+    }
+  },
 }

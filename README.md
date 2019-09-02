@@ -1,10 +1,10 @@
-# Warm UI 
+# ☀️ Warm UI 
 
 [![Build Status](https://travis-ci.org/ppambler/warm-ui.svg?branch=master)](https://travis-ci.org/ppambler/warm-ui)
 
 ## 介绍
 
-为了熟悉对Vue的使用，以及对组件化开发的理解，而制作的一个**基于 Vue**  的 UI 组件库！
+为了熟悉对 Vue 的使用，以及对组件化开发的理解，而制作的一个**基于 Vue**  的 UI 组件库！
 
 ## 安装
 
@@ -65,7 +65,3 @@ new Vue({
 感谢以下贡献者😄：
 
 [![Ambler](https://avatars3.githubusercontent.com/u/36479648?s=40&v=4)](https://github.com/ppambler/warm-ui/graphs/contributors)
-
-
-
-

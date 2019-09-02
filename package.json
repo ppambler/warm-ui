@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/ppambler/warm-ui#readme",
   "dependencies": {
+    "markdown-it-task-checkbox": "^1.0.6",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3"
   },
