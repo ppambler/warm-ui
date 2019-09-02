@@ -64,7 +64,7 @@ new Vue({
 
 感谢以下贡献者😄：
 
-[![Ambler](https://avatars3.githubusercontent.com/u/36479648?s=60&v=4)](https://github.com/ppambler/warm-ui/graphs/contributors)
+[![Ambler](https://avatars3.githubusercontent.com/u/36479648?s=40&v=4)](https://github.com/ppambler/warm-ui/graphs/contributors)
 
 
 
