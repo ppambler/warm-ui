@@ -1,0 +1,11 @@
+/.idea/
+/.vscode/
+/docs/
+/docs-dist/
+/src/
+/test/ 
+deploy.sh
+karma.conf.js
+.travis.yml
+.gitignore
+index.html
