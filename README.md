@@ -24,7 +24,7 @@ npm install warm-ui-wheel
 
 ``` css
 *, *::before, *::after {
-  border-sizing: border-box;
+  box-sizing: border-box;
 }
 ```
 
